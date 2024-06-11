@@ -1,5 +1,2 @@
 ﻿# sobesednik
-# sobesednik
-hhhvhjjxuxjjx
-kxkxbzj
-dksk
+# sobesedni
