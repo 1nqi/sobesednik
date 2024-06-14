@@ -5,14 +5,14 @@ from openai import OpenAI
 import speech_recognition as sr
 client = ElevenLabs(
 #   api_key="995f600b1fdc40b04dc1272a9ea0d4aa",
-  api_key="sk_35a766d902e5d77bcca04e08ef857dea24f6b54158f092ae"
+  api_key="TOKEN"
 )
 recognitor1 = sr.Recognizer()
 client1 = OpenAI(
-    api_key='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'
+    api_key='TOKEN'
 )
 
-system_message = {"role": "system", "content": "Ты голосовой ассистент Джарвис из железного человека. Отзывайся на имя Джарвис и прибавляй в конце обращения СЭР если это уместно. Старайся отвечать очень кратко."}
+system_message = {"role": "system", "content": "Ты голосовой собеседник Белла. Отзывайся на имя Белла и прибавляй в конце обращения СЭР если это уместно. Старайся отвечать очень кратко."}
 message_log = [system_message]
 
 def gpt():
@@ -43,7 +43,7 @@ def recognition():
                 continue
         return searching
 
-def huy(searching):
+def main(searching):
                 message_log.append({"role": "user", "content": searching})
                 print(searching)
                 response = gpt()
@@ -57,4 +57,4 @@ def huy(searching):
                 print(response)
                 play(audio)
 while True: 
-    huy(recognition())
+    main(recognition())
